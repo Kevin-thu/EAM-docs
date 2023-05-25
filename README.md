@@ -10,3 +10,7 @@ This is the documentation for Enterprise Asset Management Project.
     - About: about.md
   ```
 - Preview locally: `mkdocs serve`
+
+## Reference
+https://www.mkdocs.org/getting-started/
+https://squidfunk.github.io/mkdocs-material/
