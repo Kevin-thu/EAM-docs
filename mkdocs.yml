@@ -2,5 +2,13 @@ site_name: EAM-docs
 theme:
   name: material
 nav:
-  - Home: index.md
-  - 项目概述: summary.md
+  - 项目概述: index.md
+  - 用户手册: user.md
+  - 数据库表单: database.md
+  - 前端模块设计: module/frontend.md
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

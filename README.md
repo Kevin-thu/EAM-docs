@@ -13,4 +13,5 @@ This is the documentation for Enterprise Asset Management Project.
 
 ## Reference
 https://www.mkdocs.org/getting-started/
+
 https://squidfunk.github.io/mkdocs-material/
