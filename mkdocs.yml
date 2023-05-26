@@ -1,3 +1,6 @@
 site_name: EAM-docs
 theme:
   name: material
+nav:
+  - Home: index.md
+  - 项目概述: summary.md
