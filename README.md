@@ -10,6 +10,7 @@ This is the documentation for Enterprise Asset Management Project.
     - About: about.md
   ```
 - Preview locally: `mkdocs serve`
+- Deploy: `mkdocs build` `mkdocs gh-deploy`
 
 ## Reference
 https://www.mkdocs.org/getting-started/
