@@ -54,3 +54,38 @@
 ### `assets/[id].tsx`
 对应组件 `AssetUI`，渲染资产详情界面。
 
+### `userasset/index.tsx`
+对应组件 `CheckUI`，渲染个人资产界面。
+
+### `userasset/apply.tsx`
+对应组件 `ApplyUI`，渲染资产申请与审批界面。
+
+## 组件模块 `/components`
+在 `/components` 下放了页面渲染中需要用到的所有组件，并按照上述分类进行了目录划分，在此仅选择若干有代表性的组件进行讲解。
+
+### `UserTableUI`
+用户列表对应组件，基于 ProTable 实现。从后端获取当前用户所在实体用户信息列表（若为超级管理员会获取所有用户信息），以表格形式展示在前端。若为系统管理员，还可以对成员进行操作。获取的用户信息形式为：
+
+属性名 | 类型 | 功能或含义
+---------|----------|---------
+ `user` | `string` | 用户名
+ `user_type` | `{name: string}[]` | 用户类型
+ `entity_name` | `string` | 实体名
+ `dept_name` | `string` | 部门名
+ `valid` | `boolean` | 是否激活
+
+### `UserModal`
+创建或修改用户对应的弹框表单，基于 ModalForm 实现。属性包括：
+
+属性名 | 类型 | 功能或含义
+---------|----------|---------
+ `isCreate` | `boolean` | 创建还是修改
+ `user` | `string` | 用户名
+ `privilege` | `DefaultOptionType[]` | 用户权限（label为权限名称）
+ `entity_name` | `string` | 实体名
+ `dept_name` | `string` | 部门名
+ `valid` | `boolean` | 是否激活
+ `handleRefresh` | `() => void` | 处理自动刷新
+
+若为超级管理员，会从后端获取实体列表供选择；并根据所选实体/企业系统管理员所在实体获取部门列表供选择。选择完用户属性后，会发送给后端进行创建/修改。
+
