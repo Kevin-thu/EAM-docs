@@ -293,6 +293,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -315,6 +317,20 @@
     <li class="md-nav__item">
       <a href="../../user/user/" class="md-nav__link">
         用户故事
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/list/" class="md-nav__link">
+        需求清单
       </a>
     </li>
   
@@ -659,6 +675,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#depttree" class="md-nav__link">
+    DeptTree
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -900,6 +923,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#depttree" class="md-nav__link">
+    DeptTree
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1084,6 +1114,24 @@
 </tbody>
 </table>
 <p>若为超级管理员，会从后端获取实体列表供选择；并根据所选实体/企业系统管理员所在实体获取部门列表供选择。选择完用户属性后，会发送给后端进行创建/修改。</p>
+<h3 id="depttree"><code>DeptTree</code></h3>
+<p>展示部门树形结构对应组件，基于 AntDesign 库中的 Tree 实现。从后端获取当前用户所在实体的下属部门结构（若为超级管理员会获取所有实体信息），以树的形式展示在前端。属性包括：</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>功能或含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>entity_id</code></td>
+<td><code>number</code></td>
+<td>所属业务实体 id</td>
+</tr>
+</tbody>
+</table>
 <h2 id="utils">通用函数模块 <code>/utils</code></h2>
 <h3 id="hashtsx"><code>hash.tsx</code></h3>
 <p>加盐哈希函数，对明文密码使用 SHA256 算法加密处理。</p>
