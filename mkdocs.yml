@@ -30,6 +30,7 @@ nav:
   - 项目概述: index.md
   - 需求分析:
     - 用户故事: user/user.md
+    - 需求清单: user/list.md
     - 用户用例与流程图: user/table.md
     - 用户权限: user/previlege.md
   - 数据库设计: 
