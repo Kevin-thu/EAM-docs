@@ -12,20 +12,18 @@
         <meta name="author" content="李飞翰 黄宇翔 李轶凡 张凯文 孙维泽">
       
       
-        <link rel="canonical" href="https://Kevin-thu.github.io/EAM-docs/user/previlege/">
+        <link rel="canonical" href="https://Kevin-thu.github.io/EAM-docs/api/api/">
       
       
-        <link rel="prev" href="../table/">
+        <link rel="prev" href="../../module/frontend/">
       
-      
-        <link rel="next" href="../../database/database/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>用户权限 - EAM-docs</title>
+        <title>文档API - EAM-docs</title>
       
     
     
@@ -67,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#api" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              用户权限
+              文档API
             
           </span>
         </div>
@@ -178,15 +176,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../user/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../user/user/" class="md-tabs__link">
         需求分析
       </a>
     </li>
@@ -228,13 +224,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../api/api/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         API 设计
       </a>
     </li>
@@ -294,16 +292,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
         
@@ -322,7 +318,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           需求分析
@@ -335,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user/" class="md-nav__link">
+      <a href="../../user/user/" class="md-nav__link">
         用户故事
       </a>
     </li>
@@ -349,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list/" class="md-nav__link">
+      <a href="../../user/list/" class="md-nav__link">
         需求清单
       </a>
     </li>
@@ -363,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../table/" class="md-nav__link">
+      <a href="../../user/table/" class="md-nav__link">
         用户用例与流程图
       </a>
     </li>
@@ -375,21 +371,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../user/previlege/" class="md-nav__link">
         用户权限
       </a>
-      
     </li>
   
 
@@ -529,14 +515,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
         
@@ -549,7 +537,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           API 设计
@@ -560,11 +548,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../api/api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         文档API
       </a>
+      
     </li>
   
 
@@ -609,217 +607,9 @@
                   
 
 
-<h1 id="_1">用户权限</h1>
-<p>该系统有<strong>超级管理员，企业系统管理员，企业资产管理员，普通用户</strong>四种身份。这四种身份的权限列举如下：</p>
-<table>
-<thead>
-<tr>
-<th>权限 \ 身份</th>
-<th>超级管理员</th>
-<th>企业系统管理员</th>
-<th>企业资产管理员</th>
-<th>普通用户</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>员工查看</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-</tr>
-<tr>
-<td>员工信息修改</td>
-<td>O</td>
-<td>O</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>员工创建与删除</td>
-<td>O</td>
-<td>O</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>实体创建，查看，修改与删除</td>
-<td>O</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>部门创建，查看，修改与删除</td>
-<td>O</td>
-<td>O</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>资产分类定义</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>资产属性定义</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>资产标签格式定义</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>部门资产查询</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>部门资产导入</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>部门资产于部门间转移</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>部门资产投入使用</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>部门资产删除与清退</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>数据中心</td>
-<td>O</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>导出数据日志与重启任务</td>
-<td>O</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>导入资产任务与重启任务</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>查看总资产量，资产价值与净值</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>查看资产饼状统计图与折损图</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>查看资产不同部门分布玫瑰图</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>个人资产查看</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-</tr>
-<tr>
-<td>提出资产领用申请</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-</tr>
-<tr>
-<td>提出资产退库申请</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-</tr>
-<tr>
-<td>提出资产维保申请</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-</tr>
-<tr>
-<td>提出资产转移申请</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-</tr>
-<tr>
-<td>提出资产归还申请</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-</tr>
-<tr>
-<td>审批资产申请</td>
-<td>X</td>
-<td>X</td>
-<td>O</td>
-<td>X</td>
-</tr>
-<tr>
-<td>查看第三方应用</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-<td>O</td>
-</tr>
-<tr>
-<td>编辑第三方应用</td>
-<td>O</td>
-<td>O</td>
-<td>X</td>
-<td>X</td>
-</tr>
-</tbody>
-</table>
+<h1 id="api">API 文档</h1>
+<p>请前往 <strong><a href="https://sl6aovf5z5.apifox.cn/api-70762171">这个网页</a></strong> 查看 api 接口的详细信息。</p>
+<p>感谢 apifox 提供的 api 展示功能。</p>
 
 
 
