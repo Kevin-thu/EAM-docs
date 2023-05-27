@@ -38,6 +38,7 @@ nav:
     - ER图: database/er.md
   - 模块设计: 
     - 前端: module/frontend.md
+    - 后端: module/backend.md
   - API 设计:
     - 文档API: api/api.md
 markdown_extensions:
