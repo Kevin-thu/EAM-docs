@@ -12,20 +12,16 @@
         <meta name="author" content="李飞翰 黄宇翔 李轶凡 张凯文 孙维泽">
       
       
-        <link rel="canonical" href="https://Kevin-thu.github.io/EAM-docs/user/list/">
+        <link rel="canonical" href="https://Kevin-thu.github.io/EAM-docs/module/backend/">
       
       
-        <link rel="prev" href="../user/">
-      
-      
-        <link rel="next" href="../table/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>需求清单 - EAM-docs</title>
+        <title>后端模块设计 - EAM-docs</title>
       
     
     
@@ -100,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              需求清单
+              后端模块设计
             
           </span>
         </div>
@@ -178,15 +174,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../user/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../user/user/" class="md-tabs__link">
         需求分析
       </a>
     </li>
@@ -218,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../module/frontend/" class="md-tabs__link">
+      <a href="../frontend/" class="md-tabs__link">
         模块设计
       </a>
     </li>
@@ -290,16 +284,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
         
@@ -318,7 +310,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           需求分析
@@ -331,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user/" class="md-nav__link">
+      <a href="../../user/user/" class="md-nav__link">
         用户故事
       </a>
     </li>
@@ -343,21 +335,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../user/list/" class="md-nav__link">
         需求清单
       </a>
-      
     </li>
   
 
@@ -369,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../table/" class="md-nav__link">
+      <a href="../../user/table/" class="md-nav__link">
         用户用例与流程图
       </a>
     </li>
@@ -383,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../previlege/" class="md-nav__link">
+      <a href="../../user/previlege/" class="md-nav__link">
         用户权限
       </a>
     </li>
@@ -505,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module/frontend/" class="md-nav__link">
+      <a href="../frontend/" class="md-nav__link">
         前端
       </a>
     </li>
@@ -554,6 +536,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    user 用户信息管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization" class="md-nav__link">
+    organization 企业架构管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    assets 资产管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    task 待办任务
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filetask" class="md-nav__link">
+    filetask 文件异步任务
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    后端模块模式图
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -567,141 +599,65 @@
                   
 
 
-<h1 id="_1">需求清单</h1>
+<h1 id="_1">后端模块设计</h1>
+<p>后端整体使用 Django 作为基本框架设计，使用 django_q 辅助执行定时任务和异步任务，使用 mptt 辅助执行数据请求分页等功能。后端可以解耦为五部分：<code>user</code>, <code>organization</code>, <code>assets</code>, <code>task</code>, <code>filetask</code>，分别负责用户信息管理、企业架构管理、资产管理、待办任务以及文件异步任务。下面将对每部分的功能进行介绍。</p>
 <table>
 <thead>
 <tr>
-<th>需求编号</th>
-<th>需求描述</th>
+<th>名称</th>
+<th>中文名称</th>
+<th>主要功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>[1.1.1]</td>
-<td>用户登录登出</td>
+<td>user</td>
+<td>用户信息管理</td>
+<td>储存管理用户信息、鉴权</td>
 </tr>
 <tr>
-<td>[1.1.2]</td>
-<td>系统管理员 可以创建、修改用户</td>
+<td>organization</td>
+<td>企业架构管理</td>
+<td>储存管理实体、部门关系</td>
 </tr>
 <tr>
-<td>[1.1.3]</td>
-<td>系统管理员 可以创建维护系统的角色</td>
+<td>assets</td>
+<td>资产管理</td>
+<td>储存管理资产、资产类别、资产标签</td>
 </tr>
 <tr>
-<td>[1.2.1]</td>
-<td>系统管理员 查看和维护企业的组织部门数据</td>
+<td>task</td>
+<td>待办任务</td>
+<td>管理用户待办任务的创建和审批</td>
 </tr>
 <tr>
-<td>[1.2.2]</td>
-<td>系统管理员 查看和维护企业的员工数据</td>
-</tr>
-<tr>
-<td>[1.3.1]</td>
-<td>显示不同应用的门户入口</td>
-</tr>
-<tr>
-<td>[1.3.2]</td>
-<td>系统管理员 可以管理应用</td>
-</tr>
-<tr>
-<td>[1.3.3]</td>
-<td>员工需要处理的代办任务的入口</td>
-</tr>
-<tr>
-<td>[1.4.1]</td>
-<td>系统管理员 可以查看系统操作日志</td>
-</tr>
-<tr>
-<td>[1.4.2]</td>
-<td>系统管理员 可以查看和管理异步任务</td>
-</tr>
-<tr>
-<td>[1.5.1]</td>
-<td>飞书账号绑定及登录</td>
-</tr>
-<tr>
-<td>[1.5.2]</td>
-<td>将站内的消息提醒自动推送到飞书账户中</td>
-</tr>
-<tr>
-<td>[1.5.3]</td>
-<td>资产管理员 可以利用飞书审批资产相关的申请</td>
-</tr>
-<tr>
-<td>[2.1.1]</td>
-<td>超级管理员 创建和管理该应用的业务实体列表</td>
-</tr>
-<tr>
-<td>[2.2.1]</td>
-<td>资产管理员 定义资产的层级分类树</td>
-</tr>
-<tr>
-<td>[2.2.2]</td>
-<td>资产管理员 定义某业务实体下资产的自定义属性</td>
-</tr>
-<tr>
-<td>[2.2.3]</td>
-<td>资产管理员 定义打印出来的资产标签卡片内容的模板</td>
-</tr>
-<tr>
-<td>[2.3.1]</td>
-<td>资产管理员 可以一次录入多个资产</td>
-</tr>
-<tr>
-<td>[2.3.2]</td>
-<td>资产管理员 可以修改单个资产实例的信息</td>
-</tr>
-<tr>
-<td>[2.3.3]</td>
-<td>资产管理员 查询自己管辖的资产，查看单个资产的全视图，打印标签</td>
-</tr>
-<tr>
-<td>[2.3.4]</td>
-<td>资产管理员 可以通过文件批量导入资产</td>
-</tr>
-<tr>
-<td>[2.3.5]</td>
-<td>资产管理员 进行资产清退</td>
-</tr>
-<tr>
-<td>[2.3.6]</td>
-<td>资产管理员 向其他部门的资产管理员批量调拨资产</td>
-</tr>
-<tr>
-<td>[2.4.1]</td>
-<td>员工 查看自己名下挂账了哪些资产</td>
-</tr>
-<tr>
-<td>[2.4.2]</td>
-<td>员工 向资产管理员领用资产</td>
-</tr>
-<tr>
-<td>[2.4.3]</td>
-<td>员工 提交资产退库申请</td>
-</tr>
-<tr>
-<td>[2.4.4]</td>
-<td>员工 提交资产维修保养申请</td>
-</tr>
-<tr>
-<td>[2.4.5]</td>
-<td>员工 将某些资产转移给另一个员工</td>
-</tr>
-<tr>
-<td>[2.4.6]</td>
-<td>支持扫描粘贴在资产设备上的标签读取资产的有关信息</td>
-</tr>
-<tr>
-<td>[2.5.1]</td>
-<td>资产管理员 可以查看自己管辖内的资产的统计情况</td>
-</tr>
-<tr>
-<td>[2.5.2]</td>
-<td>系统自动根据对所有资产进行折旧运算</td>
+<td>filetask</td>
+<td>文件异步任务</td>
+<td>异步地处理批量导入和导出</td>
 </tr>
 </tbody>
 </table>
+<h2 id="user"><code>user</code> 用户信息管理</h2>
+<p>在此模块中，我们共使用了两个模型，分别为 django 自带的<code>django.contrib.auth.models.User</code>（后简称<code>User</code>）以及我们自行创建的<code>UserInfo</code>。</p>
+<p><code>User</code>中储存了用户的<code>id</code>和<code>密码</code>，使用 django 自带的密码功能实现对用户编号与密码的对应管理和加密。<code>UserInfo</code>中储存了用户的详细信息，例如用户名、实体、部门等信息。</p>
+<p>此部分负责了用户注册、登入登出、管理员对用户信息进行变更以及飞书绑定、飞书登录的功能。除此之外，其他模块中的鉴权部分由此部分完成，具体方法为查询<code>UserInfo</code>中记录的权限信息。</p>
+<h2 id="organization"><code>organization</code> 企业架构管理</h2>
+<p>此模块中，共实现了三个模型，分别为<code>Entity</code>, <code>Organization</code>，分别记录了实体编号、名称，部门编号、名称、父部门等信息；<code>ThirdPartyUrl</code>，记录了与第三方url应用相关的信息，例如绑定部门、url、图片链接等。</p>
+<p><code>Entity</code>模型负责了实体的创建、编辑、删除以及获取实体信息；<code>Organization</code>模型负责了部门的创建、编辑、删除以及获取不同格式的部门信息。<code>ThirdPartyUrl</code>中的每条数据与<code>Entity</code>一一对应，负责了第三方应用的配置、修改等功能。</p>
+<p>此部分负责维护系统中实体和部门的架构关系，以及与实体绑定的第三方应用。</p>
+<h2 id="assets"><code>assets</code> 资产管理</h2>
+<p>这是最核心的部分之一，负责管理系统中的资产，由四个模型构成：<code>Assets</code>, <code>AssetsType</code>, <code>AssetsFormat</code>, <code>AssetHistory</code>。它们分别负责管理资产信息、资产类别定义、资产格式定义以及储存资产变动的历史。</p>
+<p><code>Assets</code>模型负责了资产的增加、删除、查询、信息修改、状态变更、所有人变更、维保、提供扫描信息等功能；<code>AssetsType</code>负责资产类别定义，使用树状结构存储资产类别，负责资产类别的添加、删除和资产类别树的展示；<code>AssetsFormat</code>中的数据与<code>Entity</code>一一对应，用于储存不同资产定义的资产标签格式；<code>AssetHistory</code>负责历史展示、数据统计等功能。</p>
+<p>除此之外，使用 django_q 创建和发起定时任务，负责资产定时折旧。此部分负责维护与资产相关的全部功能。</p>
+<h2 id="task"><code>task</code> 待办任务</h2>
+<p>这也是最核心的部分之一，负责管理用户发起的待办任务。此部分由模型<code>Task</code>构成，定义了5种审批单，负责处理审批单的发起、审批、同意/拒绝、删除等。</p>
+<p>除此之外，此部分还负责了飞书审批同步功能。当一个审批单被发起，此模块会自动地向飞书API发起一个请求，将审批单同步到飞书客户端并设置回调API。当飞书上的同意/拒绝被点击时，通过请求回调API与此模块联动，在后端处理审批单。</p>
+<h2 id="filetask"><code>filetask</code> 文件异步任务</h2>
+<p>此部分负责处理批量导入等文件异步任务，由一个模型<code>FileTask</code>构成。</p>
+<p>当用户请求批量导入任务列表、请求批量导入或批量导出日志时，此部分会完成相应操作。</p>
+<p>此部分使用<code>django_q.tasks.async_task</code>异步地处理任务，提升性能。</p>
+<h2 id="_2">后端模块模式图</h2>
+<p><img alt="" src="../backend.png" /></p>
 
 
 
