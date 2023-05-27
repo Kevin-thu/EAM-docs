@@ -1,4 +1,4 @@
-site_name: EAM-docs by Pipeline:passed 2023
+site_name: EAM-docs
 site_description: 2023 Spring 软工项目：企业资产管理系统的说明文档 by Pipeline:passed
 site_author: 李飞翰 黄宇翔 李轶凡 张凯文 孙维泽
 site_url: https://Kevin-thu.github.io/EAM-docs/
@@ -40,6 +40,8 @@ nav:
     - 前端: module/frontend.md
     - 后端: module/backend.md
   - API 设计: api/api.md
+
+copyright: Copyright &copy; Pipeline:passed 2023
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
