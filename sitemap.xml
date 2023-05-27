@@ -6,12 +6,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Kevin-thu.github.io/EAM-docs/database/</loc>
+         <loc>https://Kevin-thu.github.io/EAM-docs/database/database/</loc>
+         <lastmod>2023-05-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Kevin-thu.github.io/EAM-docs/database/er/</loc>
          <lastmod>2023-05-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Kevin-thu.github.io/EAM-docs/module/frontend/</loc>
+         <lastmod>2023-05-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Kevin-thu.github.io/EAM-docs/user/list/</loc>
          <lastmod>2023-05-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

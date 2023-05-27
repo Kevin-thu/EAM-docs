@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://Kevin-thu.github.io/EAM-docs/module/frontend/">
       
       
-        <link rel="prev" href="../../database/">
+        <link rel="prev" href="../../database/er/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -194,11 +194,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../database/" class="md-tabs__link">
-      数据库表单
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../database/database/" class="md-tabs__link">
+        数据库设计
+      </a>
+    </li>
+  
 
       
         
@@ -289,6 +293,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -311,6 +317,20 @@
     <li class="md-nav__item">
       <a href="../../user/user/" class="md-nav__link">
         用户故事
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/list/" class="md-nav__link">
+        需求清单
       </a>
     </li>
   
@@ -358,10 +378,64 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          数据库设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          数据库设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../database/" class="md-nav__link">
+      <a href="../../database/database/" class="md-nav__link">
         数据库表单
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/er/" class="md-nav__link">
+        ER图
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -597,6 +671,13 @@
           <li class="md-nav__item">
   <a href="#usermodal" class="md-nav__link">
     UserModal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depttree" class="md-nav__link">
+    DeptTree
   </a>
   
 </li>
@@ -842,6 +923,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#depttree" class="md-nav__link">
+    DeptTree
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1026,6 +1114,24 @@
 </tbody>
 </table>
 <p>若为超级管理员，会从后端获取实体列表供选择；并根据所选实体/企业系统管理员所在实体获取部门列表供选择。选择完用户属性后，会发送给后端进行创建/修改。</p>
+<h3 id="depttree"><code>DeptTree</code></h3>
+<p>展示部门树形结构对应组件，基于 AntDesign 库中的 Tree 实现。从后端获取当前用户所在实体的下属部门结构（若为超级管理员会获取所有实体信息），以树的形式展示在前端。属性包括：</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>功能或含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>entity_id</code></td>
+<td><code>number</code></td>
+<td>所属业务实体 id</td>
+</tr>
+</tbody>
+</table>
 <h2 id="utils">通用函数模块 <code>/utils</code></h2>
 <h3 id="hashtsx"><code>hash.tsx</code></h3>
 <p>加盐哈希函数，对明文密码使用 SHA256 算法加密处理。</p>
