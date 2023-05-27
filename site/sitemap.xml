@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Kevin-thu.github.io/EAM-docs/api/api/</loc>
+         <lastmod>2023-05-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Kevin-thu.github.io/EAM-docs/database/database/</loc>
          <lastmod>2023-05-27</lastmod>
          <changefreq>daily</changefreq>

@@ -12,20 +12,18 @@
         <meta name="author" content="李飞翰 黄宇翔 李轶凡 张凯文 孙维泽">
       
       
-        <link rel="canonical" href="https://Kevin-thu.github.io/EAM-docs/user/user/">
+        <link rel="canonical" href="https://Kevin-thu.github.io/EAM-docs/api/api/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../../module/frontend/">
       
-      
-        <link rel="next" href="../list/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>用户故事 - EAM-docs</title>
+        <title>文档API - EAM-docs</title>
       
     
     
@@ -67,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#api" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              用户故事
+              文档API
             
           </span>
         </div>
@@ -178,15 +176,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../user/user/" class="md-tabs__link">
         需求分析
       </a>
     </li>
@@ -228,13 +224,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../api/api/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         API 设计
       </a>
     </li>
@@ -294,16 +292,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
         
@@ -322,7 +318,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           需求分析
@@ -333,21 +329,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../user/user/" class="md-nav__link">
         用户故事
       </a>
-      
     </li>
   
 
@@ -359,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list/" class="md-nav__link">
+      <a href="../../user/list/" class="md-nav__link">
         需求清单
       </a>
     </li>
@@ -373,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../table/" class="md-nav__link">
+      <a href="../../user/table/" class="md-nav__link">
         用户用例与流程图
       </a>
     </li>
@@ -387,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../previlege/" class="md-nav__link">
+      <a href="../../user/previlege/" class="md-nav__link">
         用户权限
       </a>
     </li>
@@ -529,14 +515,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
         
@@ -549,7 +537,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           API 设计
@@ -560,11 +548,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../api/api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         文档API
       </a>
+      
     </li>
   
 
@@ -609,34 +607,9 @@
                   
 
 
-<h1 id="_1">用户故事</h1>
-<p>👨‍💼 <em>超级管理员 Leo：</em></p>
-<blockquote>
-<p>身为超级管理员，我需要能够对不同企业进行整体的把控，帮助企业初始化资产管理系统，并在必要时刻介入企业内部帮助完成人事、资产调动等任务。</p>
-</blockquote>
-<p>针对加入系统的初创企业，或者已然成熟的大型企业，我需要能够为企业进行对应企业实体的整体构建，并将必要的权力下放到企业内部。这不仅需要我能够对企业进行操作，同时也需要我有人事管理的最高权力。</p>
-<p>当企业内部发生高权限人员调动等问题时，需要联系我进行相应的更改与操作，以协助企业完成其自身的想法与构建。而当企业内部的资产或人事管理出现问题，如关键管理人密码丢失、忘记、辞职等问题时，必要的话我会进入企业内部管理并进行相应的调动与调整，直至企业内部逻辑确立，管理稳定。</p>
-<p>👩🏼‍💼 <em>企业系统管理员 Debbie</em></p>
-<blockquote>
-<p>身为DeepLam Tech的系统管理员，我需要能够对企业的人事入职、离职与调动进行操作，同时还负责不同部门的调整、合并与删除。另外的，我有权力获取企业人事、部门与资产操作的所有详情信息，以追溯操作。</p>
-</blockquote>
-<p>我作为企业的人事部主管人员，负责企业整体的人事与部门调动。HR的信息汇总到我这里后我将进行人员的录入，不同主管收到的辞职信息需要我来处理。当部门发生合并，解散等事件时，需要我来介入进行相应的后续系统操作。</p>
-<p>当企业有需要追溯的人事、部门等操作时，我将进行相应的查询。必要时，我将会导出相关日志，移交相应的核查部门。</p>
-<p>同时作为企业的枢纽，我有权对企业成员使用的第三方应用进行操作，以适配不同的需求。</p>
-<p>同时作为企业的一员，我同样使用企业的资产，必要时需要向资产管理员进行相应的资产申请。我想在一个界面统一的查询自己的资产情况。</p>
-<p>👨‍💻 <em>企业资产管理员 Aaron</em></p>
-<blockquote>
-<p>身为DeepLam Tech的算子研发部门的资产管理员，我需要能够定义企业的资产类型与属性，设置资产张贴的标签格式并导出。同时我有权对算子研发部门及其下属部门的资产进行管理与统计。</p>
-</blockquote>
-<p>我作为算子研发部门的资产管理员，我有权为我们的部门添加相应的特殊资产类型，并定义属性。同时为了在不同的资产上张贴形式各异的标签，我可以进行设计并进行对应的标签图案导出。标签最好支持二维码，扫描即可查看资产的详细情况，便于部门的资产管理。</p>
-<p>同时，针对不同部门之间的资产调拨，我需要成为该任务的管理者，以便于部门间的资产流通。而针对员工的资产退库，维护，转移，领用等请求，我需要进行审批并进行资产的下放。总而言之，我对自身所在部门及其下属部门的资产具有绝对的管理权力。而这一切每次都登录系统实在太过复杂，我希望通过我们办公使用的飞书App即可进行相应的一键操作。</p>
-<p>最后我应该能够查看资产的详细统计信息，并进行针对性的调整与上报。</p>
-<p>👨‍🏭 <em>普通员工 Eren</em></p>
-<blockquote>
-<p>身为DeepLam Tech的高并行开发部门的一名普通员工，我需要管理自己的资产，并进行对应的操作</p>
-</blockquote>
-<p>我需要企业根据我的请求下发我需要的鼠标，键盘，显示器等资产。同时，当这些资产有损坏时，我应当能够提交维保的申请，并等待资产维护结束后发放回来。当我想把我的鼠标转移给别人，或者无需使用时退还库存时，我应该能够进行对应的操作。</p>
-<p>我希望我的账户能够绑定飞书，以使用企业更加便捷的资产管理。</p>
+<h1 id="api">API 文档</h1>
+<p>请前往 <strong><a href="https://sl6aovf5z5.apifox.cn/api-70762171">这个网页</a></strong> 查看 api 接口的详细信息。</p>
+<p>感谢 apifox 提供的 api 展示功能。</p>
 
 
 
